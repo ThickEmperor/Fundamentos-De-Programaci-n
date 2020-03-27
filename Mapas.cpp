@@ -15,7 +15,7 @@ int main()
     printf("  segundos: ");
     scanf("%f", &seg);
     while((d = getc(stdin)) != '\n' && d != EOF);
-    grad1 = grados + (min / 60) + (seg / 3600);
+    grad1 = grados + (min / 60) + (seg / 3600); //realiza la conversación de grados, minutos y segundos
     if(lat == "Sur" || lat == "sur")
 	{
         grad1 = -grad1;
@@ -28,7 +28,7 @@ int main()
     scanf("%f", &min);
     printf("  segundos: ");
     scanf("%f", &seg);
-    grad2 = grados + (min / 60) + (seg / 3600);
+    grad2 = grados + (min / 60) + (seg / 3600); //realiza la conversación de grados, minutos y segundos
     if(strcmp(lat,"Sur") == 0 || strcmp(lat,"sur") == 0) //comparación de latitud
 	{
         if(strcmp(longi,"Oeste") == 0 || strcmp(longi,"oeste") == 0)
