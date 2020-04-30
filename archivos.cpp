@@ -3,7 +3,7 @@
 #include <string.h>
 #include <ctype.h>
 
-char *trim(char *str)
+char *trim(char *str) //Hace un trim a una cadena de texto
 {
     size_t len = 0;
     char *frontp = str;
@@ -35,14 +35,14 @@ int main()
 	FILE *aarchivo;
 	char linea[10];
 	aarchivo = fopen("ids_unix.txt", "r");
-	if(aarchivo == NULL)
+	if(aarchivo == NULL)//verificar si es nulo o no
 	{
 		printf("Error al abrir el archivo");
 		return(1);
 	}
 	while( fgets ( linea, 10, aarchivo ) != NULL )
     {
-        trim(linea);
+        trim(linea);//se ocupa el trim para quitar los espacios y saltos de línea
         printf("0%s@ulsaoaxaca.edu.mx\n",linea);
     }
 
